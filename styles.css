@@ -1,0 +1,432 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c3edd5;
+}
+body.loaded {
+    opacity: 1; 
+}
+
+
+header {
+    top: 0;
+    background-color: rgb(66, 134, 84);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    transition: top 0.3s;
+}
+#lang-toggle {
+    padding: 8px 16px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    cursor: pointer;
+    
+    color: #333; 
+    font-size: 14px; 
+    
+}
+
+#lang-toggle:hover {
+    background-color: #f0f0f0; 
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+* {
+    scrollbar-width: thin; 
+    scrollbar-color: rgba(1, 61, 9, 0.4) transparent;
+}
+body.scrolled header {
+    top: -100px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    padding: 10px 0;
+}
+
+header:hover {
+    top: 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem 0;
+    background-color: white;
+    border-radius: 8px;
+   
+    display: flex;
+    align-items: center;
+}
+#about {
+    margin-top: 10%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.about-text {
+    flex: 1; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.about-title {
+    margin-bottom: 1rem;
+    text-align: left;
+    color: #4caf58;
+    font: 2em sans-serif;
+}
+
+.about-description {
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#city-image {
+    margin-left: 5rem; 
+    max-width: 60%;
+    border-radius: 14px;
+}.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    display: flex; 
+    transition: transform 0.5s ease-in-out; 
+}
+
+.content {
+    min-width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+#famous_place1 { background-image: url("Image/hnc-new.jpg"); }
+#famous_place2 { background-image: url("Image/ATK Định Hoá.png"); }
+#famous_place3 { background-image: url("Image/DCTC.png"); }
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    text-align: center; 
+}
+.text-container {
+    padding: 20px;
+    max-width: 800px; 
+}
+
+.text-container h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.text-container p {
+    font-size: 1.2em;
+}
+.slider-prev, .slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1; 
+    height: 20rem;
+}
+
+.slider-prev { left: 10px; }
+.slider-next { right: 10px; }
+.tour-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tour-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: absolute;
+    top: 0; 
+    left: 45%;
+    color: #4caf58;
+    max-width: 100%;
+    background-color: #f9f9f9; 
+    padding: 1rem 0; 
+    border-radius: 8px 8px 0 0;
+    z-index: 1;
+}
+.tour-list {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 2rem; 
+    margin-bottom: 2rem;
+   
+    color: #333333;
+}
+.tour-item {
+    border: 1px solid #ccc; 
+    margin-bottom: 10px; 
+    padding: 10px;
+    display: flex; 
+    flex-direction: column; 
+    border-radius: 14px;
+    background-color: rgba(33, 120, 61, 0.4);
+    font-size: 18px;
+}
+.tour-item-top {
+  display: flex;
+  align-items: flex-start;
+}
+.tour-image-container { 
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-end; 
+            margin-right: 10px;
+        }
+.tour-item img {
+    width: 800px; 
+    height: 600px;
+    margin-right: 10px; 
+    border-radius: 5%;
+    margin-top: 14px;
+    border: 1px solid black; 
+}
+.tour-item-info {
+    flex-grow: 1; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+.tour-schedule ul {
+    list-style-type: disc; 
+    padding-left: 20px;
+}
+.tour-image-button-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+.tour-button {
+    display: inline-block;
+    padding: 12px 24px; 
+    background-color: #f05123; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; 
+    border: none;
+    cursor: pointer;
+    font-weight: 500; 
+    transition: background-color 0.3s ease; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    margin-top: 10px; 
+    width: fit-content; 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 25%;
+    height: 25%;
+}
+.tour-button:hover {
+    background-color: #d84315; 
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.02); 
+}
+.tour-button:active {
+    transform: scale(0.98); 
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
+}
+.close-button {
+    font-size: 40px; 
+    width: 70px; 
+    height: 70px; 
+}
+section h2 {
+    margin-top: 0;
+}
+
+#contact {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   height: 10vh;
+   margin-bottom: 50px;
+   font-size: 18px;
+}
+#contact h2 {
+    text-align: center;
+    color: #4caf58;
+    margin-bottom: 1rem;
+    flex-basis: 100%;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+section#contact form p {
+    margin: 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+section#contact form p strong {
+    color: #4caf58;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: rgb(66, 134, 84);
+    color: white;
+    height: 40px;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px;
+    position: relative; 
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block; 
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#tourType {
+    padding: 10px; 
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"] {
+    width: calc(100% - 12px); 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="submit"]{
+    background-color: #007bff; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
