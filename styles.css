@@ -320,7 +320,6 @@ section {
 section h2 {
     margin-top: 0;
 }
-
 #contact {
     padding: 2rem;
     background-color: #fff;
@@ -340,7 +339,6 @@ section h2 {
     margin-bottom: 1rem;
     flex-basis: 100%;
 }
-
 #contact form {
     display: flex;
     flex-direction: row;
@@ -348,17 +346,14 @@ section h2 {
     justify-content: space-between;
     width: 100%;
 }
-
 section#contact form p {
     margin: 0.5rem 1rem;
     font-size: 0.9rem;
     color: #333;
 }
-
 section#contact form p strong {
     color: rgb(76, 175, 88);
 }
-
 footer {
     text-align: center;
     padding: 1rem 0;
@@ -380,7 +375,6 @@ footer {
     overflow: auto; 
     background-color: rgba(0,0,0,0.4); 
 }
-
 .modal-content {
     top: -16%;
     background-color: #fefefe;
@@ -392,11 +386,9 @@ footer {
     position: relative; 
     border-radius: 14px;
 }
-
 .form-group {
     margin-bottom: 10px;
 }
-
 label {
     display: block; 
     margin-bottom: 5px;
@@ -429,8 +421,3 @@ input[type="submit"]{
 input[type="submit"]:hover {
     background-color: #0056b3;
 }
-
-
-
-
-
