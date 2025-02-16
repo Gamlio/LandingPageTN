@@ -369,7 +369,7 @@ footer {
     bottom: 0;
     z-index: 1;
 }
-.modal {
+.modal {  
     display: none; 
     position: fixed; 
     z-index: 1; 
@@ -382,6 +382,7 @@ footer {
 }
 
 .modal-content {
+    top: -16%;
     background-color: #fefefe;
     margin: 15% auto; 
     padding: 20px;
@@ -389,10 +390,11 @@ footer {
     width: 80%; 
     max-width: 500px;
     position: relative; 
+    border-radius: 14px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 label {
@@ -427,6 +429,8 @@ input[type="submit"]{
 input[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+
 
 
 
