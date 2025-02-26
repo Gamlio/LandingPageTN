@@ -133,23 +133,42 @@ window.onclick = function(event) {
 }
 forms.forEach(form => {
     form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const formData = new FormData(form);
-        const modal = form.closest('.modal'); 
-        fetch('/your-server-endpoint', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-            alert("Đăng ký thành công!");
-            modal.style.display = "none";
-            form.reset();
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            alert("Có lỗi xảy ra. Vui lòng thử lại sau.");
-        });
+     // Lấy giá trị của trường name
+     const nameInput = form.querySelector('#name');
+     const name = nameInput.value;
+
+     // Lấy giá trị của trường email
+     const emailInput = form.querySelector('#email');
+     const email = emailInput.value;
+
+     // Lấy giá trị của trường phone
+     const phoneInput = form.querySelector('#phone');
+     const phone = phoneInput.value;
+
+     // Lấy giá trị của trường address
+     const addressInput = form.querySelector('#address');
+     const address = addressInput.value;
+
+     // Lấy giá trị của trường dob
+     const dobInput = form.querySelector('#dob');
+     const dob = dobInput.value;
+
+     // Lấy giá trị của trường numPeople
+     const numPeopleInput = form.querySelector('#numPeople');
+     const numPeople = numPeopleInput.value;
+
+     // Lấy giá trị của trường tourType
+     const tourTypeInput = form.querySelector('#tourType');
+     const tourType = tourTypeInput.value;
+
+     // Bạn có thể làm gì đó với các giá trị này (ví dụ: log ra console)
+     console.log("Họ và tên:", name);
+     console.log("Email:", email);
+     console.log("Số điện thoại:", phone);
+     console.log("Địa chỉ:", address);
+     console.log("Ngày tháng đi:", dob);
+     console.log("Số người:", numPeople);
+     console.log("Loại tour:", tourType);
+           // Formspree sẽ tự động nhận giá trị từ các trường input
     });
-});
+}); 

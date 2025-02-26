@@ -95,7 +95,6 @@ section {
     margin: 1rem 0;
     background-color: white;
     border-radius: 8px;
-   
     display: flex;
     align-items: center;
 }
@@ -238,6 +237,7 @@ section {
     margin-top: 2rem; 
     margin-bottom: 2rem;
     color: #333333;
+    
 }
 .tour-item {
     border: 1px solid #ccc; 
@@ -246,8 +246,32 @@ section {
     display: flex; 
     flex-direction: column; 
     border-radius: 14px;
-    background-color: rgb(209, 249, 221);
+    background-color: rgba(205, 253, 215, 0.64);
     font-size: 18px;
+}
+.tour-item-info h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tour-item-info p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.tour-item-info p strong {
+    font-weight: 600;
+    color: #03651a;
+}
+
+.tour-item-info .tour-schedule {
+    margin-top: 20px;
 }
 .tour-item-top {
   display: flex;
@@ -274,10 +298,26 @@ section {
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.tour-schedule ul {
+.tour-schedule ul li{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Chọn font chữ chuyên nghiệp */
+    font-size: 1em; 
+    line-height: 1.6; 
+    margin-bottom: 10px; 
+    color: #333;
+}
+.tour-schedule ul li strong {
+    font-weight: 600; 
+    color: #000000; 
+}
+
+.tour-schedule ul li ul li {
+    padding-left: 20px; 
     list-style-type: disc; 
-    padding-left: 20px;
 }
 .tour-image-button-container {
     display: flex;
@@ -287,7 +327,7 @@ section {
 .tour-button {
     display: inline-block;
     padding: 12px 24px; 
-    background-color: #f05123; 
+    background-color: #3bc626; 
     color: white;
     text-decoration: none;
     border-radius: 5px; 
@@ -321,38 +361,53 @@ section h2 {
     margin-top: 0;
 }
 #contact {
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 2rem 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-   height: 10vh;
-   margin-bottom: 50px;
-   font-size: 18px;
-}
-#contact h2 {
+    background-color: #f9f9f9;
+    padding: 60px 0;
     text-align: center;
-    color: #4caf58;
-    margin-bottom: 1rem;
-    flex-basis: 100%;
 }
-#contact form {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
 }
-section#contact form p {
-    margin: 0.5rem 1rem;
-    font-size: 0.9rem;
+
+.contact-title {
+    font-size: 2.5em;
     color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
-section#contact form p strong {
-    color: rgb(76, 175, 88);
+
+.contact-info {
+    display: inline-block;
+    text-align: left;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-label {
+    font-weight: bold;
+    color: #555;
+    min-width: 120px; /* Đảm bảo các nhãn có chiều rộng bằng nhau */
+}
+
+.contact-value {
+    color: #333;
+    flex-grow: 1;
+}
+
+.contact-value a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-value a:hover {
+    text-decoration: underline;
 }
 footer {
     text-align: center;
@@ -372,30 +427,57 @@ footer {
     top: 0;
     width: 100%; 
     height: 100%;
-    overflow: auto; 
+    overflow: hidden; 
     background-color: rgba(0,0,0,0.4); 
 }
 .modal-content {
-    top: -16%;
+    top: -18%;
     background-color: #fefefe;
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; 
-    max-width: 500px;
+    width: 450px; 
+    max-height: 80vh;
     position: relative; 
     border-radius: 14px;
+    z-index: 4;
 }
 .form-group {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 label {
-    display: block; 
-    margin-bottom: 5px;
+    margin-bottom: 3px; /* Giảm khoảng cách xuống 3px */
     font-weight: bold;
+    font-size: 14px; /* Giảm kích thước font label */
 }
 #tourType {
-    padding: 10px; 
+    width: 100%; /* Chiều rộng 100% của phần tử cha */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Bao gồm padding và border vào chiều rộng */
+    font-size: 14px;
+    margin-top: 3px;
+    margin-bottom: 8px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+#tourType:focus {
+    border-color: #007bff; /* Màu viền khi focus */
+  
+    box-shadow: 0 0 8px rgba(0, 123, 155, 0.5); /* Tăng bóng đổ và làm mềm mại hơn */
+    transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
+}
+.tour-type-display {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-size: 1em; 
+    font-weight: 600; 
+    color: #000000;
+    padding: 8px 12px; 
+    border-radius: 5px; 
+    margin-top: 3px;
+    display: inline-block; 
 }
 input[type="text"],
 input[type="email"],
@@ -409,7 +491,7 @@ input[type="number"] {
     box-sizing: border-box;
 }
 input[type="submit"]{
-    background-color: #007bff; 
+    background-color: #21ae44; 
     color: white;
     padding: 10px 15px;
     border: none;
@@ -419,5 +501,5 @@ input[type="submit"]{
     height: 60px;
 }
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #b30000;
 }
